@@ -7,15 +7,16 @@ type PropsTextBase = {
   styleProp?: { [key: string]: string| number };
 }
 
-const TextBase: FC<PropsWithChildren<PropsTextBase>> = ({ children, styleProp, type, weight }) => {
-  const styles = [
-    style.body,
-    [ type && style[ type ] ],
-    [ weight && style[ weight ] ],
-    styleProp
-  ]
+const TextBase: FC<PropsWithChildren<PropsTextBase>> = 
+  ({ children, styleProp, type, weight }) => {
+    const styles = [
+      style.body,
+      [ type && style[ type ] ],
+      [ weight && style[ weight ] ],
+      styleProp
+    ]
 
-  return <Text style={ styles }>{ children }</Text>
+    return <Text style={ styles }>{ children }</Text>
 }
 
 export default TextBase
