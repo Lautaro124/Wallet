@@ -1,5 +1,6 @@
-import { StyleSheet, TextInput } from 'react-native'
+import { TextInput } from 'react-native'
 import React, { FC } from 'react'
+import { inputStyle } from './style';
 
 type PropsInput = {
   value?: string;
@@ -13,8 +14,8 @@ const Input: FC<PropsInput> =
   ({ value, onChangeText, placeholder, borderInput, styleProps, ...restOfProps }) => {
 
     const styles = [
-      style.inputDefaultStyle,
-      [ borderInput && style[ borderInput ] ],
+      inputStyle.inputDefaultStyle,
+      [ borderInput && inputStyle[ borderInput ] ],
       styleProps
     ]
 
@@ -28,18 +29,3 @@ const Input: FC<PropsInput> =
 }
 
 export default Input
-
-const style = StyleSheet.create({
-  inputDefaultStyle: {
-    padding: 10,
-    borderRadius: 5,
-    fontSize: 16,
-    fontWeight: '400'
-  },
-  borded: {
-    borderWidth: 1,
-  },
-  outlined: {
-    borderBottomWidth: 1,
-  }
-})
