@@ -1,5 +1,6 @@
-import { StyleSheet, Text } from 'react-native'
+import { Text } from 'react-native'
 import { type PropsWithChildren, FC } from 'react'
+import { textStyle } from './styles';
 
 type PropsTextBase = {
   type?: 'title' | 'subtitle' | 'small';
@@ -10,9 +11,9 @@ type PropsTextBase = {
 const TextBase: FC<PropsWithChildren<PropsTextBase>> = 
   ({ children, styleProp, type, weight }) => {
     const styles = [
-      style.body,
-      [ type && style[ type ] ],
-      [ weight && style[ weight ] ],
+      textStyle.body,
+      [ type && textStyle[ type ] ],
+      [ weight && textStyle[ weight ] ],
       styleProp
     ]
 
@@ -20,24 +21,3 @@ const TextBase: FC<PropsWithChildren<PropsTextBase>> =
 }
 
 export default TextBase
-
-const style = StyleSheet.create({
-  body: {
-    fontSize: 14,
-  },
-  title: {
-    fontSize: 18,
-  },
-  subtitle: {
-    fontSize: 16,
-  },
-  small: {
-    fontSize: 12,
-  },
-  bold: {
-    fontWeight: 'bold'
-  },
-  italic: {
-    fontStyle: 'italic',
-  },  
-})

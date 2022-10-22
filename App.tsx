@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import TextBase from './src/components/atoms/text/TextBase';
 
 
 const App = () => {
@@ -44,7 +45,12 @@ const App = () => {
         style={backgroundStyle}>
         <Header />
         <View>
-          
+          <TextBase 
+            type='title' 
+            weight='bold' 
+            styleProp={{ fontSize: 40 }}>
+            Gsoos
+          </TextBase>
         </View>
       </ScrollView>
     </SafeAreaView>
