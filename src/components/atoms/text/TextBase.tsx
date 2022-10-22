@@ -2,7 +2,7 @@ import { StyleSheet, Text } from 'react-native'
 import { type PropsWithChildren, FC } from 'react'
 
 type PropsTextBase = {
-  type?: 'title' | 'subtitle' | 'small' | 'large';
+  type?: 'title' | 'subtitle' | 'small';
   weight?: 'bold' | 'italic';
   styleProp?: { [key: string]: string| number };
 }
@@ -22,21 +22,16 @@ export default TextBase
 
 const style = StyleSheet.create({
   body: {
-    fontSize: 16,
+    fontSize: 14,
   },
   title: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 18,
   },
   subtitle: {
     fontSize: 16,
-    fontWeight: 'bold',
   },
   small: {
-    fontSize: 14,
-  },
-  large: {
-    fontSize: 16,
+    fontSize: 12,
   },
   bold: {
     fontWeight: 'bold'
