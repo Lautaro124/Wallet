@@ -18,5 +18,5 @@ export const textStyle = StyleSheet.create({
   },
   italic: {
     fontStyle: 'italic',
-  },  
+  },
 })

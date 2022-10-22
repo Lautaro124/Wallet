@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Input from './src/components/atoms/input/Input';
 import TextBase from './src/components/atoms/text/TextBase';
 
 
@@ -49,10 +50,13 @@ const App = () => {
             type='title' 
             weight='bold' 
             styleProp={{ fontSize: 40 }}>
-            Gsoos
+            Gso
           </TextBase>
         </View>
       </ScrollView>
+      <View>
+        <Input placeholder='Write here...' />
+      </View>
     </SafeAreaView>
   );
 };
